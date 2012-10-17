@@ -23,9 +23,7 @@
 // check if it is an Internet Explorer 8 abd XDomainRequest is available
 if ($.browser.msie && window.hasOwnProperty('XDomainRequest')) {
 	// rewrite jQuery's ajax function
-	$.ajax = function(confObj) {
-		console.log('AJAX:', confObj.url);
-		
+	$.ajax = function(confObj) {		
 		// create XDR object 
 		var xdr = new XDomainRequest(); 
 		// error
